@@ -1,0 +1,25 @@
+services:
+  php-fpm:
+    container_name: app
+    build:
+      dockerfile: compose/Dockerfile
+      context: ../
+    networks:
+      - nginx-network
+
+  web:
+    image: nginx:latest
+    container_name: nginx
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ../public:/var/www/public
+      - ./nginx:/etc/nginx
+    networks:
+      - nginx-network
+    depends_on:
+      - php-fpm
+
+networks:
+  nginx-network:

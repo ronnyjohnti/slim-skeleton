@@ -1,0 +1,30 @@
+{
+  "authors": [
+    {
+      "name": "Ronny John",
+      "email": "me@ronnyjohnti.dev"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "require": {
+    "slim/slim": "^4.14",
+    "slim/psr7": "^1.7",
+    "nyholm/psr7": "^1.8",
+    "nyholm/psr7-server": "^1.1",
+    "guzzlehttp/psr7": "^2",
+    "laminas/laminas-diactoros": "^3.3",
+    "php-di/php-di": "^7.0",
+    "doctrine/orm": "^3",
+    "doctrine/dbal": "^4",
+    "symfony/cache": "^7",
+    "ext-pdo": "*",
+    "vlucas/phpdotenv": "^5.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.2"
+  }
+}
