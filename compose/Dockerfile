@@ -13,7 +13,7 @@ RUN apt-get update -y && apt-get install -y \
 
 COPY ./public /var/www/public
 COPY ./src /var/www/src
-COPY ./config /var/www/config
+COPY ./app /var/www/app
 COPY ./vendor /var/www/vendor
 
 EXPOSE 80
